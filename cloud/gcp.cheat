@@ -17,7 +17,7 @@ gcloud config set disable_prompts <OPTION>
 $ OPTION: echo 'false true' | tr ' ' '\n' --- --map "grep -q t && echo 1 || echo 0"
 
 # Set a proxy type
-gcloud config set proxy/type http
+gcloud config set proxy/type <TYPE>
 
 $ TYPE: echo 'http https' | tr ' ' '\n' --- --map "grep -q t && echo 1 || echo 0"
 
