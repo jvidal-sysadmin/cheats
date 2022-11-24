@@ -1,0 +1,28 @@
+% gcp, gcloud, google
+
+### Login
+# To obtain access credentials for your user account
+gcloud auth login
+
+# To set the project property in the core section
+gcloud config set project <PROJECT_ID>
+
+### Config
+# To set the zone property in the compute section
+gcloud config set compute/zone <ZONE_NAME>
+
+# To disable prompting for scripting
+gcloud config set disable_prompts <OPTION>
+
+$ OPTION: echo 'false true' | tr ' ' '\n' --- --map "grep -q t && echo 1 || echo 0"
+
+# Set a proxy type
+gcloud config set proxy/type http
+
+$ TYPE: echo 'http https' | tr ' ' '\n' --- --map "grep -q t && echo 1 || echo 0"
+
+# Set a proxy address
+gcloud config set proxy/address <IP>
+
+# Set a proxy port
+gcloud config set proxy/port <PORT>
